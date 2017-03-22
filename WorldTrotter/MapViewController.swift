@@ -18,6 +18,9 @@ class MapViewController: UIViewController {
         // create a map view
         mapView = MKMapView()
         
+        // add markers
+        addMarkers()
+        
         // set it as the view of this view controller
         view = mapView
         
@@ -44,6 +47,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let initialLocation = CLLocation(latitude: -37.818477, longitude: 144.9666907)
+        centreMap(location: initialLocation)
         print("MapViewController loaded its view.")
     }
     
@@ -58,6 +63,21 @@ class MapViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func addMarkers() {
+        let melbourne = MKPointAnnotation()
+        melbourne.coordinate = CLLocationCoordinate2D(latitude: -37.818477, longitude: 144.9666907)
+        let malvern = MKPointAnnotation()
+        malvern.coordinate = CLLocationCoordinate2D(latitude: -37.8584039, longitude: 145.0181066)
+        mapView.addAnnotation(melbourne)
+        mapView.addAnnotation(malvern)
+    }
+    
+    func centreMap(location: CLLocation) {
+        let regionRadius: CLLocationDistance = 10000
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
 }

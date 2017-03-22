@@ -16,6 +16,7 @@
 		AE7046D61E8202A3009C9F57 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7046D51E8202A3009C9F57 /* ConversionViewController.swift */; };
 		AE7046D91E8223E7009C9F57 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7046D81E8223E7009C9F57 /* MapKit.framework */; };
 		AE7046DB1E8229F6009C9F57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7046DA1E8229F6009C9F57 /* MapViewController.swift */; };
+		AE7046DD1E82386D009C9F57 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7046DC1E82386D009C9F57 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AE7046D51E8202A3009C9F57 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
 		AE7046D81E8223E7009C9F57 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AE7046DA1E8229F6009C9F57 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AE7046DC1E82386D009C9F57 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AE46B48E1E81F3E30061EEDB /* AppDelegate.swift */,
 				AE7046D51E8202A3009C9F57 /* ConversionViewController.swift */,
 				AE46B4921E81F3E30061EEDB /* Main.storyboard */,
+				AE7046DC1E82386D009C9F57 /* WebViewController.swift */,
 				AE7046DA1E8229F6009C9F57 /* MapViewController.swift */,
 				AE46B4951E81F3E30061EEDB /* Assets.xcassets */,
 				AE46B4971E81F3E30061EEDB /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 				AE7046D61E8202A3009C9F57 /* ConversionViewController.swift in Sources */,
 				AE7046DB1E8229F6009C9F57 /* MapViewController.swift in Sources */,
 				AE46B48F1E81F3E30061EEDB /* AppDelegate.swift in Sources */,
+				AE7046DD1E82386D009C9F57 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

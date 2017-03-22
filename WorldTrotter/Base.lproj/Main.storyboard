@@ -102,6 +102,21 @@
             </objects>
             <point key="canvasLocation" x="1542" y="46"/>
         </scene>
+        <!--BNR-->
+        <scene sceneID="HF8-aW-KPW">
+            <objects>
+                <viewController id="K7k-Bx-7B7" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="Kuw-7f-mWj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </webView>
+                    <tabBarItem key="tabBarItem" title="BNR" id="PIN-n1-VPF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZr-aL-QU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="750"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cbW-Of-sr8">
             <objects>
@@ -114,6 +129,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bvw-0l-hLY"/>
                         <segue destination="7yc-99-mLX" kind="relationship" relationship="viewControllers" id="Ffg-dK-yXc"/>
+                        <segue destination="K7k-Bx-7B7" kind="relationship" relationship="viewControllers" id="MM1-sv-RQx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dI0-VW-eOm" userLabel="First Responder" sceneMemberID="firstResponder"/>

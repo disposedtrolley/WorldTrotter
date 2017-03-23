@@ -13,13 +13,18 @@ import MapKit
 class MapViewController: UIViewController {
     
     var mapView: MKMapView!
+    var currentPin: Int = 0
+    var locations: [CLLocation] = [
+        CLLocation(latitude: -37.818477, longitude: 144.9666907),
+        CLLocation(latitude: -37.8584039, longitude: 145.0181066)
+    ]
     
     override func loadView() {
         // create a map view
         mapView = MKMapView()
         
         // add markers
-        addMarkers()
+        addPins()
         
         // set it as the view of this view controller
         view = mapView
@@ -47,9 +52,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let initialLocation = CLLocation(latitude: -37.818477, longitude: 144.9666907)
+        let initialLocation = locations[currentPin]
         centreMap(location: initialLocation)
-        print("MapViewController loaded its view.")
     }
     
     func mapTypeChanged(_ segControl: UISegmentedControl) {
@@ -65,13 +69,12 @@ class MapViewController: UIViewController {
         }
     }
     
-    func addMarkers() {
-        let melbourne = MKPointAnnotation()
-        melbourne.coordinate = CLLocationCoordinate2D(latitude: -37.818477, longitude: 144.9666907)
-        let malvern = MKPointAnnotation()
-        malvern.coordinate = CLLocationCoordinate2D(latitude: -37.8584039, longitude: 145.0181066)
-        mapView.addAnnotation(melbourne)
-        mapView.addAnnotation(malvern)
+    func addPins() {
+        for location in locations {
+            let mapPin = MKPointAnnotation()
+            mapPin.coordinate = location.coordinate
+            mapView.addAnnotation(mapPin)
+        }
     }
     
     func centreMap(location: CLLocation) {
